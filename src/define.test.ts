@@ -1,4 +1,4 @@
-import type {RollupOutput, OutputChunk, OutputAsset} from 'rollup'
+import type { RollupOutput, OutputChunk, OutputAsset } from 'rollup'
 
 import { rollup } from 'rollup'
 import { stripIndent } from 'common-tags'
