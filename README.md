@@ -40,23 +40,23 @@ npm install rollup-plugin-define --save-dev
 Create a `rollup.config.js` [configuration file](https://www.rollupjs.org/guide/en/#configuration-files) and import the plugin:
 
 ```js
-import define from 'rollup-plugin-define';
+import define from 'rollup-plugin-define'
 
 export default {
   input: 'src/index.js',
   output: {
     dir: 'output',
-    format: 'cjs'
+    format: 'cjs',
   },
   plugins: [
     define({
       replacements: {
-        'process.env.NODE_ENV: '"production"',
+        'process.env.NODE_ENV': '"production"',
         __buildDate__: () => JSON.stringify(new Date()),
-      }
-    })
-  ]
-};
+      },
+    }),
+  ],
+}
 ```
 
 Then call `rollup` either via the [CLI](https://www.rollupjs.org/guide/en/#command-line-reference) or the [API](https://www.rollupjs.org/guide/en/#javascript-api).
