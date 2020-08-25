@@ -1,0 +1,66 @@
+{
+  "name": "rollup-plugin-define",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Replace AST nodes while bundling",
+  "keywords": [
+    "rollup",
+    "plugin",
+    "replace",
+    "es2015",
+    "npm",
+    "modules"
+  ],
+  "homepage": "https:/github.com/sastan/rollup-plugin-define#readme",
+  "repository": "github:sastan/rollup-plugin-define",
+  "license": "MIT",
+  "author": "Sascha Tandel <s.tandel@kenoxa.de>",
+  "source": "src/define.ts",
+  "browser": false,
+  "scripts": {
+    "build": "nps build",
+    "format": "nps format",
+    "prepublishOnly": "echo 'Use `npm start release` instead of `npm publish`!' && exit 1",
+    "start": "nps",
+    "test": "nps test",
+    "preversion": "nps test",
+    "postversion": "nps release"
+  },
+  "prettier": "@carv/prettier-config",
+  "eslintConfig": {
+    "extends": "@carv/eslint-config",
+    "root": true
+  },
+  "dependencies": {
+    "@rollup/pluginutils": "^4.0.0",
+    "ast-matcher": "^1.1.1",
+    "escape-string-regexp": "^4.0.0",
+    "magic-string": "^0.25.7"
+  },
+  "devDependencies": {
+    "@carv/eslint-config": "^1.2.5",
+    "@carv/prettier-config": "^1.0.2",
+    "@carv/snowpack-scripts": "^1.4.1",
+    "@carv/types": "^1.1.1",
+    "@types/common-tags": "^1.8.0",
+    "common-tags": "^1.8.0",
+    "doctoc": "^1.4.0",
+    "envinfo": "^7.5.1",
+    "esbuild": "^0.6.27",
+    "eslint": "^7.3.1",
+    "jest": "^26.1.0",
+    "nps": "^5.9.12",
+    "prettier": "^2.0.5",
+    "rollup": "^2.26.5",
+    "typescript": "^4.0.2"
+  },
+  "peerDependencies": {
+    "rollup": "^1.20.0 || ^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "snowpack": {
+    "extends": "@carv/snowpack-scripts"
+  }
+}
